@@ -1,7 +1,6 @@
 
 my @input =  roundrobin(lines.map(*.comb)).map(*.join).grep(/\S/);
 
-
 sub do-math(@numbers) {
     my @results;
     my $first = @numbers.shift;
@@ -24,8 +23,6 @@ sub do-math(@numbers) {
         when "*" {@results.push([*] @nums)}
     }
 }
-
-say @input;
 
 say [+] do-math(@input);
 
